@@ -3,7 +3,7 @@ an javascript based chatroom with whiteboard
 
 annuus测试0.0.1版本
 
-  for demo please visit http://www.annuus.net
+  for demo please visit http://52.69.2.194:3000
   
 	这是个原理性的测试版本，验证技术的可行性.
 	目前本web应用整合了express，paperjs,printscreen.js等开源代码。
