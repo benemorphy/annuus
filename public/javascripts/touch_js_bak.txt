@@ -1,0 +1,35 @@
+	  var touchEvents = {
+        touchstart: "touchstart"||"mousedown",
+        touchmove: "touchmove"||"mousemove",
+        touchend: "touchend"||"mouseup",
+
+
+        /**
+         * @desc:判断是否pc设备，若是pc，需要更改touch事件为鼠标事件，否则默认触摸事件
+         */
+        initTouchEvents: function () {
+           // if (IsPC()) {
+						    
+                this.touchstart = "mousedown";
+                this.touchmove = "mousemove";
+                this.touchend = "mouseup";
+				//  
+
+           // }
+        }
+    };
+	//初始化touchevents
+    //document.touchEvents.initTouchEvents(); 	   
+	 $(document).bind(touchEvents.touchstart, function (event) {
+          //  event.preventDefault();
+            
+        });
+        $(document).bind(touchEvents.touchmove, function (event) {
+            event.preventDefault();
+            
+        });
+
+        $(document).bind(touchEvents.touchend, function (event) {
+           // event.preventDefault();
+            
+        });

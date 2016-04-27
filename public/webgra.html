@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Socket.IO Example</title>
+	
+	 <link rel="stylesheet" type="text/css" href="\stylesheets\style.css">
+	
+	
+  </head>
+  <body>
+   <div id="main" >
+	<div id="container">
+		<div>	
+   
+			<textarea id="message" ></textarea>
+			<input type="submit" id="submit" value="Send message" />
+			</div>
+	
+		<div id="toolbar">
+		<img id="tool1"  src="\button\tool1.png"/>
+		<img id="tool2"  src="\button\tool2.png"/>
+		<img id="tool3"  src="\button\tool3.png"/>
+		<img id="tool4"  src="\button\tool4.png"/>
+		<img id="tool5"  src="\button\tool5.png"/>
+		<img id="tool6"  src="\button\tool6.png"/>
+		
+		</div>
+		<div id="imgfile">
+		<input type="file" id="file" />  
+		<input type="button" id="readimg" value="读取图像" onclick="readAsDataURL()" /> 
+	
+		</div>
+		
+		
+		</div>
+		<canvas id="paper" >
+		Your browser needs to support canvas for this to work!
+		</canvas>
+		</div>
+		
+		<script src="/socket.io/socket.io.js"></script>
+
+<script type="text/javascript">
+			var socket=io.connect();//与服务器进行连接
+			button=document.getElementById('readimg');
+			button.onclick=function(){
+			socket.emit('foo', 'hello, it is form web')};
+
+	
+   
+  </script> 
+  </body>
+</html>

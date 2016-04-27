@@ -1,0 +1,22 @@
+CACHE MANIFEST
+# version 0.0.1
+
+CACHE:
+/button/newnote.png
+/button/sketch.png
+/button/cloud.png
+/button/image.png
+/button/help.png
+/javascripts/jquery-1.8.2.min.js
+/socket.io/socket.io.js
+/javascripts/printscreen.js
+/javascripts/paper/paper-full.min.js
+/javascripts/annuus.js
+/javascripts/annuus_img.js
+/javascripts/annuus_db.js
+/javascripts/annuus_message.js
+/javascripts/annuus_sound.js
+/javascripts/base64.js
+
+NETWORK:
+*

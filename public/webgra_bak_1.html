@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Socket.IO Example</title>
+	<style type="text/css">
+	div#main{width:960px;
+					height=600px;
+					overflow=hidden;
+					position=fixed;
+					border-color:#777777;
+					border-style: solid;
+					border-width: 5px;
+				
+					}
+	div#container{width:160px;
+					height=600px;
+					overflow=hidden;
+					position=fixed;
+					border-color:#777777;
+					border-style: solid;
+					border-width: 5px;
+					clear:left;
+					}
+	div#toolbar {float:left;
+					width=20%;
+					border-color:#777777;
+					border-style: solid;
+					border-width: 5px;
+					
+					overflow=hidden;
+					}
+		
+		input#tool1 	{	float:left;
+							clear:left}
+		input#tool2,tool3,tool5 {	float:left;
+						}	
+		input#tool4{	float:left;
+							clear:left}	
+		input#tool6 {	float:left;
+						}					
+	canvas#paper{ 
+				border-color:#777777;
+				border-style: solid;
+				border-width: 5px;
+				width=600px;
+				height=320px;
+				margin=0%;
+				padding=0%;
+				clear:right;
+				
+	}
+	 
+  
+	</style>
+  </head>
+  <body>
+   <div id="main" >
+	<div id="container">
+		<div>	
+   
+			<textarea id="message" rows="4" cols="20"></textarea>
+			<input type="submit" id="submit" value="Send message" />
+			</div>
+	
+		<div id="toolbar">
+		<input type="button" id="tool1" value="tool1" />
+		<input type="button" id="tool2" value="tool2"  />
+		<input type="button" id="tool3"  value="tool3" />
+		<input type="button" id="tool4"  value="tool4" />
+		<input type="button" id="tool5"  value="tool5" />
+		<input type="button" id="tool6"  value="tool6" />
+		</div>
+		<div id="imgfile">
+		<input type="file" id="file" />  
+		<input type="button" id="readimg" value="读取图像" onclick="readAsDataURL()" /> 
+	
+		</div>
+		
+		
+		</div>
+		<canvas id="paper" >
+		Your browser needs to support canvas for this to work!
+		</canvas>
+		</div>
+
+
+	
+   
+   
+  </body>
+</html>

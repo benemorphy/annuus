@@ -1,0 +1,143 @@
+body {
+  padding: 0px;
+  font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+p#pushmessage{height:6em;
+				width:6em;
+				position:fixed;
+				color:#ff0000;
+				/* background-color:#ffffff; */
+				top:25px;
+				left:160px;
+				font-size:1.5em;
+				z-index:3;
+	}
+	
+	p#helpmsg    {height:3em;
+				width:8em;
+				word-wrap:break-word;
+				transition-property:color;
+				transition-duration:5s;
+				color:#cccccc;
+				float:left;
+				z-index:5;
+	}
+	p#helpmsg:hover{color:#ff0000;
+	}
+	textarea#message{			clear:left;
+							float:left;
+							width:9.3em;
+							height:4.5em;
+							color:#ffffff;
+							background-color:#444455;
+								
+							
+							
+							}	
+p#usernum	{height:1em;
+				width:12em;
+				
+				color:#cccccc;
+				float:left;
+				z-index:4;
+	}
+div#main{			width:960px;
+					height:480px; 
+					overflow:hidden; 
+					position:fixed;
+					margin:0%;
+					padding:0%;
+					}
+	div#container{	width:136px;
+					height:100%;
+					overflow:hidden;
+					background-color:#333344;
+					border-color:#777777;
+					border-style: solid;
+					border-width: 3px;	
+				
+					float:left;
+					margin:0%;
+					padding:0%;
+					box-shadow:5px 5px 5px #555555;
+					}
+	div#toolbar {		float:left;
+					width:100%;
+				/*	height:100%;*/
+					border-color:#777777;
+					border-style: solid;
+					border-width: 2px;
+					
+					margin:0%;
+				    padding:0%;
+					overflow:hidden;
+					box-shadow:4px,4px,4px,4px,#777744;
+					}
+		input 		{border-style: solid;
+					border-width: 2px;
+					border-color:#777777;
+						}
+			
+	
+		input#chat 	{	float:left;
+							clear:left;
+						
+							border-radius:.5em}
+		
+		input#sketch		{	float:left;
+						 
+						border-radius:.5em}	
+		input#cloud		{	float:left;
+						 
+							border-radius:.5em;}					
+		input#image {	float:left;
+						
+						border-radius:.5em}				
+		
+		input#help {	float:left;
+					
+						border-radius:.5em;}
+		input#newnote {	float:left;
+					
+						border-radius:.5em;}						
+			input#file {	float:left;
+						height:3em;
+						}	
+			
+				
+				input#paste {	float:left; 
+						height:4.5em;
+						width:4.6em;
+						border-radius:.5em}					
+			input#sound_rec {	float:left;
+						height:4.5em;
+						width:4.6em;
+						border-radius:.5em}				
+	canvas#ann_canvas{ 
+				
+				position:fixed;
+				top:2px;
+				left:144px;
+				margin:0%;
+				padding:0%;
+				border-color:#777777;
+				border-style: solid;
+				border-width: 2px;
+				
+	}
+	canvas#paperjs_canvas{ 
+				
+				position:fixed;
+				top:2px;
+				left:144px;
+				margin:0%;
+				padding:0%;
+				z-index:6;
+				border-color:#777777;
+				border-style: solid;
+				border-width: 2px;
+	} 
+
+a {
+  color: #00B7FF;
+}

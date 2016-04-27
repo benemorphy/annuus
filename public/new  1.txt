@@ -1,0 +1,22 @@
+		
+		<div>
+		<input type="file" id="file" />  
+    <input type="button" value="读取图像" onclick="readAsDataURL()" /> 
+	</div>
+<div>	
+    <form id="message-form" action="#">
+      <textarea id="message" rows="4" cols="30"></textarea>
+      <input type="submit" value="Send message" />
+	  
+    </form>
+	</div>
+	
+	div#container{width:540px;
+					height=380px;
+					float=left;
+					position=fixed;
+					border-color:#777777;
+					border-style: solid;
+					border-width: 5px;
+					clear=right;
+					}

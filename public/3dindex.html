@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<metahttp-equiv="refresh" content="6"/>
+<html manifest="annuus.appcache">
+
+  <head>
+    <meta charset="utf-8" />
+	<meta name="robots" content="all">
+    <title>Annuus Example</title>
+	 <link rel="stylesheet" type="text/css" href="\stylesheets\style.css">
+	 <div id="main" >
+	<div id="container">
+	<p id="usernum"></p>
+		<div >	
+		
+			<textarea id="message" ></textarea>
+		
+				<p id="pushmessage">message area </p>
+				
+			</div>
+	
+		<div id="toolbar">
+		<input type="image"  id="chat"  src="\button\chat.png"/>		
+		<input type="image"  id="newnote" accesskey="n" src="\button\newnote.png"/>
+		<input type="image"  id="sketch"  accesskey="s" src="\button\sketch.png"/>
+		<input type="image"  id="cloud" accesskey="c" src="\button\cloud.png"/>
+		<input type="image" id="image"  accesskey="i" src="\button\image.png"/>
+		<input type="image"  id="help"  accesskey="k" src="\button\help.png"/>
+		</div>
+		<input type="file" id="file"  onchange="readAsDataURL()"/>  
+		<input type="submit" 	id="paste" value = "Paste" />
+		<input type="submit"   id="sound_rec" value = "Sound" />
+		<p id="output"></p>
+		<p id="helpmsg">this is help area </p>
+		</div>
+		<canvas id="ann_canvas" width=810 height=470    >
+		Your browser needs to support canvas for this to work!
+		</canvas>
+		<canvas id="paperjs_canvas" width=810 height=470  ></canvas>
+		<audio id="speak" display=none />
+		</div>
+		
+	
+  </head>
+  <body>
+ 
+   	
+		 <script src="/javascripts/jquery-1.8.2.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/javascripts/printscreen.js"></script>
+		<script type="text/javascript" src="javascripts/paper/paper-full.min.js"></script>
+		<script src="/javascripts/annuus.js"></script>
+		
+		<script type="text/javascript">
+		
+		window.applicationCache.addEventListener('updateready', function(e) {
+  if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+    window.applicationCache.swapCache();
+    if (confirm('A new version of this site is available. Load it?')) {
+      window.location.reload();
+    }
+  }
+}, false);
+
+
+	window.onload = function(){
+      PrintscreenJs.initialize('ann_canvas');
+	//  	  var ann_canvas = document.getElementById('ann_canvas');
+	//   var paper_ctx=ann_canvas.getContext('2d');
+	//  paper_ctx.fillStyle="#000000";
+	//   paper_ctx.fillRect(0,0,ann_canvas.width,ann_canvas.height);
+    };
+	$(document).ready(function(){
+	 $('#newnote').click(function(){
+	   
+		$.getScript("/javascripts/paperjs_newnote.js")});
+	   $('#sketch').click(function(){
+	   console.log("sketch clicked")
+		$.getScript("/javascripts/paperjs_sketch.js")});
+		//
+		$('#cloud').click(function(){
+	   console.log("cloud clicked")
+		$.getScript("/javascripts/paperjs_cloud.js")});
+		$('#paste').click(function(){
+	 //  console.log("paste clicked")
+		$.getScript("/javascripts/annuus_paste.js")});
+		
+		
+		$('#help').click(function(){
+	   console.log("help clicked")
+		$.getScript("/javascripts/annuus_help.js")});
+		//help message
+		$('#message').mouseenter(function(){
+		helpmessage("type message,enter to send  ");
+		});
+		$('#chat').mouseenter(function(){
+		helpmessage("not valid yet  ");
+		});
+		$('#newnote').mouseenter(function(){
+		helpmessage("click to write a new note ");
+		});
+		$('#sketch').mouseenter(function(){
+		helpmessage("click to sketch ");
+		});
+		$('#cloud').mouseenter(function(){
+		helpmessage("click to sketch a cloud line ");
+		});
+		$('#image').mouseenter(function(){
+		helpmessage(" not valid yet ");
+		});
+		$('#help').mouseenter(function(){
+		helpmessage("thanks:Nodejs,Express,Paperjs,.... ");
+		});
+		$('#file').mouseenter(function(){
+		helpmessage("select a image file ");
+		});
+		$('#paste').mouseenter(function(){
+		helpmessage("click to send background image ");
+		})
+		$('#sound_rec').mouseenter(function(){
+		helpmessage("press until voice  completed ");
+		})
+		
+		
+		});
+		
+		
+		
+	
+	</script>
+	
+
+		<script src="/javascripts/annuus_img.js"></script>
+		<script src="/javascripts/annuus_db.js"></script>
+		<script src="/javascripts/annuus_message.js"></script>
+		<script src="/javascripts/annuus_sound.js"></script>
+		<script src="/javascripts/base64.js"></script>
+	
+  </body>
+</html>
