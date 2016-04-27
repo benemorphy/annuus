@@ -1,6 +1,8 @@
 # annuus
 an javascript based chatroom with whiteboard
+
 run server:
+
 node app_l2.js
 
 annuus测试0.0.1版本
