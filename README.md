@@ -7,7 +7,7 @@ node app_l2.js
 
 annuus测试0.0.1版本
 
-  for demo please visit http://52.69.2.194:3000
+  for demo please visit http://52.69.2.194:3200
   
   please use browser as chrome,firefox , ie and safari won't work correctly
   
